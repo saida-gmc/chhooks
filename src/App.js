@@ -3,8 +3,9 @@ import "./App.css";
 import MoviesList from "./Components/MoviesList";
 import AddCard from "./Components/AddCard";
 import Data from "./Components/Data";
-
+import Search from "./Components/Search";
 import { Navbar, Nav } from "react-bootstrap";
+import Rate from "./Components/Rate";
 
 const App = () => {
   const [moviesInfo, setMoviesInfo] = useState(Data);
@@ -13,6 +14,7 @@ const App = () => {
   const handleAdd = (newMovie) => {
     setMoviesInfo([...moviesInfo, newMovie]);
   };
+
   return (
     <div className="App">
       <h1>Movie Application</h1>
@@ -20,9 +22,11 @@ const App = () => {
       <Navbar>
         <Nav>
           <AddCard handleAdd={handleAdd} />
+          <Search setSearch={setSearch} />
+          <Rate rating={rating} setRating={setRating}/>
         </Nav>
       </Navbar>
-      <MoviesList moviesInfo={moviesInfo} />
+      <MoviesList moviesInfo={moviesInfo} search={search} />
     </div>
   );
 };
