@@ -1,13 +1,13 @@
 import React from "react";
 import { Card, ListGroup } from "react-bootstrap";
 import StarRatingComponent from "react-star-rating-component";
+import Data from "./Data";
 
-const MoviesList = ({ movies }) => {
-  console.log({ movies });
+const MoviesList = ({ Data }) => {
   return (
     <div className="movieCard">
-      {movies.map((el, i) => (
-        <Card key={i} style={{ width: "18rem" }}>
+      {Data.map((el, id) => (
+        <Card key={id} style={{ width: "18rem" }}>
           <Card.Img variant="top" src={el.image} height="300px" width="300" />
 
           <Card.Body>
