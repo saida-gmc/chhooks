@@ -23,10 +23,10 @@ const App = () => {
         <Nav>
           <AddCard handleAdd={handleAdd} />
           <Search setSearch={setSearch} />
-          <Rate rating={rating} setRating={setRating}/>
+          <Rate rating={rating} setRating={setRating} />
         </Nav>
       </Navbar>
-      <MoviesList moviesInfo={moviesInfo} search={search} />
+      <MoviesList moviesInfo={moviesInfo} search={search} rating={rating} />
     </div>
   );
 };
