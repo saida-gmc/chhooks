@@ -19,7 +19,7 @@ const AddCard = ({ handleAdd }) => {
     handleAdd(newMovie);
     empty();
   };
-  console.log(newMovie);
+  // console.log(newMovie);
   const empty = () => {
     SetNewMovie({
       title: "",
